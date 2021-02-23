@@ -4,7 +4,10 @@ var path = require('path');
 
 //render about page
 router.get('/', function(req, res, next) {
-  res.render('about', {url: req.originalUrl});
+  //Store current url
+  req.session.current_url =  req.originalUrl;
+  
+  res.render('about', {user: req.user, url: req.originalUrl});
 });
 
 //handle download CV

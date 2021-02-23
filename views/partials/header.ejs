@@ -1,20 +1,30 @@
+<!--Home button-->
 <% if(url != '/welcome' && url != '/welcome/#' && url != '/' && url != '/login'){ %>
-<div id="home-btn-container">
-    <button id="home-btn"><a href="/">Inicio</a></button>
+<div class="menu-btn">
+    <a href="/">Inicio</a>
 </div>
 <% } %>
+<!--About button-->
 <% if(url != '/about'){ %>
-<div id="about-btn-container">
-    <button id="about-btn"><a href="/about">Sobre mi</a></button>
+<div class="menu-btn">
+    <a href="/about">Sobre mi</a>
 </div>
 <% } %>
-<% if(url != '/' && url != '/about' && url != '/login'){ %>
-<div id="logout-btn-container">
-    <button id="logout-btn"><a href="/auth/logout">Cerrar sesión</a></button>
+<!--Log in button-->
+<% if(url != '/login' && !user){ %>
+<div class="menu-btn">
+    <a href="/login">Iniciar sesión</a>
 </div>
+<% } %>
+<!--Log out button-->
+<% if(url != '/login' && user){ %>
+<div class="menu-btn">
+    <a href="/auth/logout">Cerrar sesión</a>
+</div>
+<!--Cancel button-->
 <% } %>
 <% if(url == '/login'){ %>
-<div id="cancel-btn-container">
-    <button id="cancel-btn"><a href="/">Cancelar</a></button>
+<div class="menu-btn">
+    <a href="/">Cancelar</a>
 </div>
 <% } %>

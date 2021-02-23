@@ -7,7 +7,16 @@ const passportSetup = require('../config/passportSetup');
 authRouter.get('/logout', (req, res) => {
     //handle with passport
     req.logout();
-    res.redirect('/');
+
+    let curr_url = req.session.current_url;
+    //Redirect home page
+    if(curr_url == '/welcome' || curr_url == '/db/nextquestion' || curr_url == '/db/results'){
+        res.redirect('/');
+    }
+    //Redirect prev url
+    else{
+        res.redirect(`${curr_url}`);
+    }
 });
 
 //auth with google

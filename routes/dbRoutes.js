@@ -124,7 +124,11 @@ dbRouter.get('/nextquestion', (req,res) =>{
             [currentQuestionId, questionsIdArray] = tools.questionTracker(questionsIdArray);
         
             //Render the question
-            res.render('questions', { questionTitle: `${results[currentQuestionId].question}`, url: req.originalUrl});
+            res.render('questions', { 
+                questionTitle: `${results[currentQuestionId].question}`, 
+                user: req.user, 
+                url: req.originalUrl
+            });
         }
         else {
             //Redirect to the results page        
@@ -204,7 +208,11 @@ dbRouter.get('/results', (req, res) => {
             })
         })
         console.log(questionObjArr);        
-        res.render('results', {posts: questionObjArr, url: req.originalUrl});
+        res.render('results', {
+            posts: questionObjArr, 
+            user: req.user,
+            url: req.originalUrl         
+        });
     });       
 });
 
