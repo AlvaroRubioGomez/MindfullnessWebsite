@@ -1,6 +1,6 @@
 # Resumen
 
-<img src="images/thumbnail.jpg" width="1200">
+<img src="public/images/github_thumbmail.png" width="1200">
 
 Este proyecto consiste en una página web desarrollada por Álvaro Rubio Gómez como un proyecto personal para poner en práctica los conceptos y herramientas aprendidas durante un periodo de autoaprendizaje de tres semanas. Las cuales incluyen, entre otras, html, css, javascript, node.js, express, MySQL, OAuth, XAMPP and AWS deployment services.
 
