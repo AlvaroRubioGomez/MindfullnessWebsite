@@ -142,31 +142,33 @@ dbRouter.get('/nextquestion', (req,res) =>{
 dbRouter.post('/submitans', (req,res) => {
     //Get answering ending time
     let endTime = Date.now();
-    //Get formatted spent time answering
-    let spentTime = tools.FormattedTime(Math.ceil((endTime - startTime)/1000));     
-    console.log('Spent time: ' + spentTime);
+    //Get spent time in seconds    
+    let spentTime = Math.ceil((endTime - startTime)/1000);  
+    console.log('spent time: ' + spentTime);
 
     //Get formatted today's day
     let todayDate = tools.getFormattedDate();    
 
-    const ansBody = req.body.answer;       
+    const ansBody = req.body.answer;    
+    
+    if(ansBody.length){ //Check for empty answers
+        let post = {
+            idUser: req.user.id,
+            idQues: currentQuestionId, 
+            answer: ansBody,   
+            usedTime: spentTime,
+            ansDate: todayDate
+        };   
 
-    let post = {
-        idUser: req.user.id,
-        idQues: currentQuestionId, 
-        answer: ansBody,   
-        usedTime: spentTime,
-        ansDate: todayDate
-    };   
-
-    let sql = 'INSERT INTO answers SET ?';
-    let query = dbConnection.query(sql, post, err =>{
-        if(err){
-            throw err;
-        }          
-        //Redirect to question page to render next question        
-        res.redirect('http://localhost:3000/db/nextquestion');      
-    });   
+        let sql = 'INSERT INTO answers SET ?';
+        let query = dbConnection.query(sql, post, err =>{
+            if(err){
+                throw err;
+            }                
+        }); 
+    }
+    //Redirect to question page to render next question    
+    res.redirect('/db/nextquestion');
 });
 
 

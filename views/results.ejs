@@ -1,22 +1,33 @@
-<div class="section-title">
-    <h2>Tus respuestas</h2>
-</div>
+
+<div class="answers-title"><p>Tus respuestas</p></div>
 <div class="tables-wrapper">
 <% for(let i = 0; i < posts.length; i++) { %>
     <% if(posts[i].answerObjArr.length != 0){ %>    
-        <div class="wrapper">
-            <div class="table-topic">
-                <h3><%= posts[i].qWording %></th></h3>                                              
+        <div class="table-wrapper">
+            <div class="table-topic" title="Enunciado de la pregunta">
+                <p><%= posts[i].qWording %></th></p>                                              
             </div>  
-            <div class="table-content-wrapper">                
+            <div class="table-content-wrapper column">                
                 <% for(let j = 0; j < posts[i].answerObjArr.length; j++) { %> 
-                <div class="table-content-row"></div>               
-                    <div class="table-cell-time"><h4><%= posts[i].answerObjArr[j].usedTime %></h4></div>
-                    <div class="table-cell-asnwer"><h4><%= posts[i].answerObjArr[j].ansWording %></h4></div>
-                    <div class="table-cell-date"><h4><%= posts[i].answerObjArr[j].ansDate %></h4></div> 
+                <div class="table-content-row row <%- j %>">
+                    <div class="row">
+                        <div class="table-cell-time cell-format">
+                            <p>
+                            <% if(posts[i].answerObjArr[j].usedTime <= 5) { %>
+                                <img class="used-time-logo" src="/images/sentiment_very_dissatisfied-24px.svg" title="El tiempo es la clave">
+                            <% } else if(5 < posts[i].answerObjArr[j].usedTime <= 15) { %>
+                                <img class="used-time-logo" src="/images/sentiment_satisfied-24px.svg" title="El tiempo es la clave">
+                            <% } else { %>
+                                <img class="used-time-logo" src="/images/sentiment_very_satisfied-24px.svg" title="El tiempo es la clave">
+                            <% } %>
+                            </p>
+                        </div>
+                        <div class="table-cell-answer cell-format" title="Tu respuesta"><p><%= posts[i].answerObjArr[j].ansWording %></p></div>    
+                    </div>             
+                    <div class="table-cell-date cell-format" title="Fecha"><p><%= posts[i].answerObjArr[j].ansDate %></p></div> 
                 </div>           
-                <% } %>                
-            </div>
+                <% } %>   
+            </div>                        
         </div>      
     <% } %>          
 <% } %>
