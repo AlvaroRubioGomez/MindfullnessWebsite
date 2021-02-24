@@ -1,12 +1,16 @@
-<h1> <%- questionTitle %> </h1>
-<form method="POST" action="/db/submitans">
-    <input class="form" type="text" name="answer" placeholder="Introduce tu respuesta" />
-        <button class="submit" type="submit">Enviar</button>
+<div class="question-page">
+<div class="question-container">
+    <div class="question-title">
+        <h2> <%- questionTitle %> </h2>
+    </div>    
+    <a class="question-next-btn" href="/db/nextquestion">
+        <img src="/images/arrow_forward_ios-24px.svg" title="Saltar pregunta">
+    </a> 
+</div>
+<form class="answer-container" method="POST" action="/db/submitans">
+    <input class="answer-text" type="text" name="answer" placeholder="Introduce tu respuesta" />
+        <button class="start-btn" type="submit">Enviar</button>
 </form>
-<div class="btn-container">
-    <div class="btn-holder">
-        <button type="button"><a href="/db/nextquestion">Saltar pregunta</a></button>
-    </div>
-</div> 
+</div>
 
 

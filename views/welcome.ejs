@@ -1,11 +1,21 @@
-<h1>Bienvenido <%- user.givenName %></h1>
-<h2>¿Estás listo?</h2>
-<h3>
-    Vamos a hacerte una serie de preguntas. Algunas de ellas son preguntas 
-    comunes que nos hacemos todos los días. Tan comunes que no nos paramos
-    a pensar realmente en ellas.  
-</h3>
-<h3>Por ello, te invitamos a que te tomes tu tiempo. No tenemos prisa</h3>
-<div id="ready-btn-container">
-    <button><a href="/db/questionspage">Si, estoy listo</a></button>
+
+<div class="about-container">
+    <div class="about-left-column">
+        <div class="section-title">
+            <h2>Bienvenido <%- user.givenName %>,</h2>
+        </div>
+        <div class="left-column-body">
+            <h3>¿Estás listo?</h3>
+            <h4>
+                Vamos a hacerte una serie de preguntas. Algunas de ellas son preguntas 
+                comunes que nos hacemos todos los días. Tan comunes que no nos paramos
+                a pensar realmente en ellas.  
+            </h4>
+            <h4>Por ello, te invitamos a que te tomes tu tiempo. No tenemos prisa</h4>
+        </div>
+        <div class="start-btn">
+            <button type="button"><a href="/db/questionspage">Si, estoy listo</a></button>
+        </div>
+    </div>    
+    <img class="big-logo" src="/images/big_logo.png" alt="Mindfullness Website logo">       
 </div>

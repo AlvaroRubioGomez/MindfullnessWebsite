@@ -1,15 +1,17 @@
-<% if(url == '/db/nextquestion'){ %>    
-    <div class="btn-container">
-        <div class="btn-holder">
-            <button type="button"><a href="/db/results">Ver tus respuestas</a></button>
-        </div>
+<div class="footer">
+    <div class="footer-menu">
+        <!--view asnwers button-->
+        <% if(url == '/db/nextquestion'){ %>  
+        <a class="footer-menu-btn" href="/db/results">
+            <img src="/images/manage_search-24px.svg" title="Ver tus respuestas">
+        </a>                 
+        <% } %>
+        <!--back to the questions button-->
+        <% if(url == '/db/results'){ %> 
+        <a class="footer-menu-btn" href="/db/questionspage">
+            <img src="/images/question_answer-24px.svg" title="Volver a las preguntas">
+        </a>             
+        <% } %>
     </div> 
-<% } %>
-<% if(url == '/db/results'){ %>
-    <div class="btn-container">
-        <div class="btn-holder">
-            <button type="button"><a href="/db/questionspage">Volver a las preguntas</a></button>
-        </div>
-    </div> 
-<% } %>
+</div>
 

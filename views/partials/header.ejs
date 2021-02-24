@@ -1,30 +1,37 @@
-<!--Home button-->
-<% if(url != '/welcome' && url != '/welcome/#' && url != '/' && url != '/login'){ %>
-<div class="menu-btn">
-    <a href="/">Inicio</a>
+<div class="header">
+    <!--logo image-->
+    <div class="header-logo-img"></div>
+    <div class="header-menu-container">
+        <!--Home button-->
+        <% if(url != '/' && url != '/login'){ %>             
+        <a class="header-menu-btn" href="/">
+            <img src="/images/home-24px.svg" title="Volver a la página principal">
+        </a>                
+        <% } %>
+        <!--About button-->
+        <% if(url != '/about'){ %>
+        <a class="header-menu-btn" href="/about">
+            <img src="/images/info-24px.svg" title="Sobre mi">
+        </a>         
+        <% } %>
+        <!--Log in button-->
+        <% if(url != '/login' && !user){ %>
+        <a class="header-menu-btn" href="/login">
+            <img src="/images/login-24px.svg" title="Iniciar sesión">
+        </a>         
+        <% } %>
+        <!--Log out button-->
+        <% if(url != '/login' && user){ %>
+        <a class="header-menu-btn" href="/auth/logout">
+            <img src="/images/logout-24px.svg" title="Cerrar sesión">
+        </a>         
+        <!--Cancel button-->
+        <% } %>
+        <% if(url == '/login'){ %>
+        <a class="header-menu-btn" href="/">
+            <img src="/images/close-24px.svg" title="Cerrar sesión">
+        </a>          
+        <% } %>
+    </div>
 </div>
-<% } %>
-<!--About button-->
-<% if(url != '/about'){ %>
-<div class="menu-btn">
-    <a href="/about">Sobre mi</a>
-</div>
-<% } %>
-<!--Log in button-->
-<% if(url != '/login' && !user){ %>
-<div class="menu-btn">
-    <a href="/login">Iniciar sesión</a>
-</div>
-<% } %>
-<!--Log out button-->
-<% if(url != '/login' && user){ %>
-<div class="menu-btn">
-    <a href="/auth/logout">Cerrar sesión</a>
-</div>
-<!--Cancel button-->
-<% } %>
-<% if(url == '/login'){ %>
-<div class="menu-btn">
-    <a href="/">Cancelar</a>
-</div>
-<% } %>
+
