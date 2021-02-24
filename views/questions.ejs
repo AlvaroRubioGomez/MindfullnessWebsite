@@ -3,14 +3,15 @@
     <div class="question-title">
         <h2> <%- questionTitle %> </h2>
     </div>    
-    <a class="question-next-btn" href="/db/nextquestion">
-        <img src="/images/arrow_forward_ios-24px.svg" title="Saltar pregunta">
+    <a href="/db/nextquestion">
+        <img class="next-btn" src="/images/arrow_forward_ios-24px.svg" title="Saltar pregunta">
     </a> 
 </div>
 <form class="answer-container" method="POST" action="/db/submitans">
-    <input class="answer-text" type="text" name="answer" placeholder="Introduce tu respuesta" />
-        <button class="start-btn" type="submit">Enviar</button>
+    <textarea  class="answer-text" rows = "12" cols = "90" placeholder="Introduce tu respuesta"></textarea>   
+    <input class="send-btn" type="image" src="/images/send-24px.svg" title="Enviar respuesta" />
 </form>
 </div>
+
 
 

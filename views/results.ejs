@@ -1,24 +1,25 @@
 <div class="section-title">
     <h2>Tus respuestas</h2>
 </div>
-<div class="full-page-body">
-    <div class="overall-table-container">
-    <% for(let i = 0; i < posts.length; i++) { %>
-        <% if(posts[i].answerObjArr.length != 0){ %>    
-            <div class="single-table-container" border="1">
-                <div class="table-title">
-                    <h3><%= posts[i].qWording %></th></h3>                                              
-                </div>  
-                <div class="table-content-container">
-                    <% for(let j = 0; j < posts[i].answerObjArr.length; j++) { %>                
-                    <div class="table-content-time"><h4><%= posts[i].answerObjArr[j].usedTime %></h4></div>
-                    <div class="table-content-asnwer"><h4><%= posts[i].answerObjArr[j].ansWording %></h4></div>
-                    <div class="table-content-date"><h4><%= posts[i].answerObjArr[j].ansDate %></h4></div>            
-                    <% } %>
-                <div>
-            </div>      
-        <% } %>          
-    <% } %>
-    </div>
+<div class="tables-wrapper">
+<% for(let i = 0; i < posts.length; i++) { %>
+    <% if(posts[i].answerObjArr.length != 0){ %>    
+        <div class="wrapper">
+            <div class="table-topic">
+                <h3><%= posts[i].qWording %></th></h3>                                              
+            </div>  
+            <div class="table-content-wrapper">                
+                <% for(let j = 0; j < posts[i].answerObjArr.length; j++) { %> 
+                <div class="table-content-row"></div>               
+                    <div class="table-cell-time"><h4><%= posts[i].answerObjArr[j].usedTime %></h4></div>
+                    <div class="table-cell-asnwer"><h4><%= posts[i].answerObjArr[j].ansWording %></h4></div>
+                    <div class="table-cell-date"><h4><%= posts[i].answerObjArr[j].ansDate %></h4></div> 
+                </div>           
+                <% } %>                
+            </div>
+        </div>      
+    <% } %>          
+<% } %>
 </div>
+
 
