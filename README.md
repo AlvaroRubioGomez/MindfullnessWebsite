@@ -1,4 +1,4 @@
-#Resumen
+# Resumen
 
 <img src="images/thumbnail.jpg" width="1200">
 
