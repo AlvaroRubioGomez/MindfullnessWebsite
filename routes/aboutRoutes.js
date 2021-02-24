@@ -12,7 +12,7 @@ router.get('/', function(req, res, next) {
 
 //handle download CV
 router.get('/downloadCV', function (req, res) {
-  var file = path.join(__dirname, '../public/files/AlvaroRubio_CV.pdf');
+  var file = path.join(__dirname, '../public/files/AlvaroRubioGomez_CV.pdf');
   res.download(file, function (err) {
       if (err) {
           console.log("Error");

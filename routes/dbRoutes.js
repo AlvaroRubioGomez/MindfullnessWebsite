@@ -53,13 +53,22 @@ let questions = [
     [0, '¿Cómo estas?, realmente'],
     [1, '¿Qué te gustaría estar haciendo ahora mismo?'],
     [2, '¿Qué te gustaría cenar esta noche?'],
-    [3,'¿A quién le agradecerias hoy por su compañia o ayuda?']
+    [3,'¿A quién le agradecerias hoy por su compañia o ayuda?'],
+    [4,'¿Cuáles son tus "debo" o autoexigencias?'],
+    [5,'¿Qué es lo que más temes?'],
+    [6,'¿Hay algo que te gustaría hacer pero no te atreves?, ¿De qué se trata?'],
+    [7,'¿Cuáles son tres cosas por las que te sientes agradecido hoy?'],
+    [8,'¿Cuál es el mayor logro de tu vida?'],
+    [9,'¿Cuál es tu mayor error?'],
+    [10,'¿Qué es lo que más te dolería perder?'],
+    [11,'¿Hay algo de ti mismo que cambiarías?¿De qué se trata?'],
+    [12,'¿Cuál es tu mejor cualidad?'],
+    [13,'¿A quién admiras?'],    
 ];
 
 //Variables
 //let user0 = 0;
 let startTime;
-let time0 = 15;
 let questionsIdArray = [];
 let currentQuestionId;
 let questionObjArr = [];
