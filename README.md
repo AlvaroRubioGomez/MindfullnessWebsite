@@ -40,6 +40,8 @@ module.exports = {
 
 ## Genera la base de datos
 
+Descarga [XAMPP](https://www.apachefriends.org/es/index.html) e inicia MySQL pulsando "Start". Con el botón "Admin" puedes abrir la base de datos para asegurarte de que todas las entradas se escriben correctamente. 
+
 Inicia la página web en local ejecutando en la consola:
 ```ruby
 node '.\app.js'
