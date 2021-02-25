@@ -13,7 +13,7 @@ A continuación se detallan los pasos a seguir para ejecutar este proyecto en lo
 
 ## Instala Node.js y Express
 
-Existen multitud de turoriales para ello, como por ejemplo [este]https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website
+Existen multitud de turoriales para ello, como por ejemplo [este](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
 
 Para instalar 
 ## Crear archivo key.js
@@ -34,7 +34,6 @@ module.exports = {
         cookieKey: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxxx'
     }
 };
-puts markdown.to_html
 ```
 *ClientID* y *ClientSecret* son credenciales que se obtienen en la página de google de [console.developers](https://console.developers.google.com/). Para más información de como, existen multiples tutoriales online, como [este](https://www.youtube.com/watch?v=xH6hAW3EqLk&ab_channel=CodeJava).
 
@@ -45,9 +44,11 @@ puts markdown.to_html
 Inicia la página web en local ejecutando en la consola:
 ```ruby
 node '.\app.js'
-puts markdown.to_html
 ```
-Vete al buscador y escribe *http://localhost:3000/db*
+Vete al buscador y escribe 
+```ruby
+http://localhost:3000/db
+```
 
 ## Genera las tablas
 
