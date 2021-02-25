@@ -15,7 +15,6 @@ A continuación se detallan los pasos a seguir para ejecutar este proyecto en lo
 
 Existen multitud de turoriales para ello, como por ejemplo [este](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/skeleton_website)
 
-Para instalar 
 ## Crear archivo key.js
 
 Por cuestiones de seguridad, este proyecto no incluye el archivo *keys.js* donde se encuentran las credenciales de Google Auth (Client ID and secret) y las key para generar las cookies.
@@ -45,10 +44,7 @@ Inicia la página web en local ejecutando en la consola:
 ```ruby
 node '.\app.js'
 ```
-Vete al buscador y escribe 
-```ruby
-http://localhost:3000/db
-```
+Vete al buscador y escribe *http://localhost:3000/db*
 
 ## Genera las tablas
 
